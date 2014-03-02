@@ -1,7 +1,7 @@
 {
   "name": "webdriverjs-selenium-bundle",
   "version": "0.0.1",
-  "description": "Bundle of webdriverjs and selenium standalone server to begin testing super quickly",
+  "description": "Want to use webdriverjs without needing to start the selenium-server separately? In that case, this is a bundle for you!", 
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
