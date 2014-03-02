@@ -2,11 +2,11 @@
 // separately.
 
 var webdriverjs = require("webdriverjs");
-var seleniumBundle = require("./index");
+var wdjsSeleniumBundle = require("./index");
 
 var client = webdriverjs.remote({ desiredCapabilities: { browserName: 'phantomjs' } });
 
-client.use(seleniumBundle({autostop: true}));
+client.use(wdjsSeleniumBundle({autostop: true}));
 
 client
     .init()

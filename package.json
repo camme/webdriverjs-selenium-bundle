@@ -1,5 +1,5 @@
 {
-  "name": "webdriverjs-bundle",
+  "name": "webdriverjs-selenium-bundle",
   "version": "0.0.1",
   "description": "Bundle of webdriverjs and selenium standalone server to begin testing super quickly",
   "main": "index.js",
