@@ -1,0 +1,25 @@
+{
+  "name": "webdriverjs-bundle",
+  "version": "0.0.1",
+  "description": "Bundle of webdriverjs and selenium standalone server to begin testing super quickly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webdriverjs",
+    "selenium",
+    "webdriver",
+    "testing"
+  ],
+  "author": "Camilo Tapia <camilo.tapia@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "webdriverjs": "^1.3.2",
+    "selenium-standalone": "~2.40.0-2.9.0",
+    "phantomjs": "~1.9.7-1"
+  },
+  "devDependencies": {
+    "webdriverjs": "^1.3.2"
+  }
+}
