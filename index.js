@@ -7,7 +7,7 @@ var selenium;
 
 function startSelenium(done) {
 
-    selenium = seleniumStandalone({ stdio: ['ignore', 'pipe', 'pipe'] }, ['-Dphantomjs.binary.path=' + phantomjsFile + '']);
+    selenium = seleniumStandalone({ stdio: ['ignore', 'pipe', 'ignore'] }, ['-Dphantomjs.binary.path=' + phantomjsFile + '']);
 
     var hasRun = false;
     selenium.stdout.on('data', function (data) {
