@@ -1,7 +1,7 @@
 {
   "name": "webdriverjs-selenium-bundle",
   "version": "0.0.2",
-  "description": "Want to use webdriverjs without needing to start the selenium-server separately? In that case, this is a bundle for you!", 
+  "description": "Want to use webdriverjs without needing to start the selenium-server separately? In that case, this is a bundle for you!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "webdriverjs": "^1.3.2",
-    "selenium-standalone": "~2.40.0-2.9.0",
+    "selenium-standalone": "~2.40.0-2.9.0-1",
     "phantomjs": "~1.9.7-1"
   },
   "devDependencies": {
