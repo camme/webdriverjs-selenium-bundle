@@ -1,10 +1,10 @@
-// This example shows how you can run a webdriverjs client without starting a selenium server
+// This example shows how you can run a webdriverio client without starting a selenium server
 // separately.
 
-var webdriverjs = require("webdriverjs");
+var webdriverio = require("webdriverio");
 var wdjsSeleniumBundle = require("./index");
 
-var client = webdriverjs.remote({ desiredCapabilities: { browserName: 'phantomjs' } });
+var client = webdriverio.remote({ desiredCapabilities: { browserName: 'phantomjs' } });
 
 client.use(wdjsSeleniumBundle({autostop: true}));
 
