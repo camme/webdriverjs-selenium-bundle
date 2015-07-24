@@ -18,11 +18,13 @@ Then just use it like this:
     var webdriverjs = require("webdriverjs");
     var wdjsSeleniumBundle = require("webdriverjs-selenium-bundle");
 
-    var client = webdriverjs.remote({ desiredCapabilities: { browserName: 'phantomjs' } });
+    // default port is 4444
+    var client = webdriverjs.remote({ desiredCapabilities: { browserName: 'phantomjs' }, port: 4444 });
 
     // autostop makes sure that the selenium server is stopped after
     // calling end().
-    client.use(wdjsSeleniumBundle({autostop: true}));
+    // port defaults to 4444, should match above
+    client.use(wdjsSeleniumBundle({autostop: true, port: 4444}));
 
     client
         .init()
