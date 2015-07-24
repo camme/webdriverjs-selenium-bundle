@@ -5,9 +5,9 @@ var seleniumStandalone = require('selenium-standalone');
 var phantomjsFile = phantomjs.path;
 var selenium;
 
-function startSelenium(done) {
+function startSelenium(port, done) {
 
-    selenium = seleniumStandalone({ stdio: ['ignore', 'pipe', 'pipe'] }, ['-Dphantomjs.binary.path=' + phantomjsFile + '']);
+    selenium = seleniumStandalone({ stdio: ['ignore', 'pipe', 'pipe'] }, ['-Dphantomjs.binary.path=' + phantomjsFile + '', '-port', port]);
 
     var hasRun = false;
     selenium.stdout.on('data', function (data) {
@@ -33,7 +33,7 @@ function killSelenium() {
 
 module.exports = function(options) {
 
-    options = options || { autostop: false };
+    options = options || { autostop: false, port: 4444 };
 
     return function () {
 
@@ -48,7 +48,7 @@ module.exports = function(options) {
 
         this.addCommand("init", function(cb) {
             if (!selenium) {
-                startSelenium(function() {
+                startSelenium(options.port, function() {
                     self._init().call(cb);
                 });
             } else {
